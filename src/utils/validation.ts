@@ -1,4 +1,3 @@
-import { Request } from "express";
 import { z } from "zod";
 
 export class ValidationError extends Error {
@@ -10,9 +9,9 @@ export class ValidationError extends Error {
 	}
 }
 
-async function validate<T extends z.ZodSchema>(
-	schema: T,
-	value: any
+export async function validate<T extends z.ZodSchema>(
+	value: any,
+	schema: T
 ): Promise<Required<z.infer<T>>> {
 	const { success, error, data } = await schema.safeParseAsync(value);
 
@@ -21,12 +20,4 @@ async function validate<T extends z.ZodSchema>(
 	}
 
 	return data;
-}
-
-export async function validateBody(req: Request, schema: z.ZodSchema) {
-	return await validate(schema, req.body);
-}
-
-export async function validateQuery(req: Request, schema: z.ZodSchema) {
-	return await validate(schema, req.query);
 }

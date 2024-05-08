@@ -14,7 +14,7 @@ const specOptions = {
 
 const uiOptions = {
 	swaggerOptions: {
-		url: "/docs/swagger.json",
+		url: "/api/docs/swagger.json",
 	},
 };
 

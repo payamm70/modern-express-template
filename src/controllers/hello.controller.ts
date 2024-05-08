@@ -4,10 +4,14 @@ import { JSend } from "@/utils/jsend";
 import { getData } from "@/services/hello.controller";
 import { validate } from "@/utils/validation";
 
-const controller: RequestHandler = async (req, res, next) => {
-	const bodySchema = z.object({ id: z.string(), foo: z.string().optional() });
-
-	const { id } = await validate(req.body, bodySchema);
+const controller: RequestHandler = async (req, res) => {
+	const { id } = await validate(
+		req.body,
+		z.object({
+			id: z.string(),
+			foo: z.string().optional(),
+		})
+	);
 
 	const data = getData(id);
 

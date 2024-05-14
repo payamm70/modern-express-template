@@ -1,5 +1,15 @@
 <div align="center">
-  <img width="150" alt="Modern Express Template" src="https://github.com/willpinha/modern-express-template/assets/86596621/94518c9d-92e2-4b3d-abe7-a5823a66a9d7" />
+  <a href="https://github.com/willpinha/modern-express-template">
+    <img width="150" alt="Modern Express Template" src="https://github.com/willpinha/modern-express-template/assets/86596621/94518c9d-92e2-4b3d-abe7-a5823a66a9d7" />
+  </a>
+</div>
+
+<br />
+
+<div align="center">
+  <a href="">
+    <img alt="License" src="https://img.shields.io/github/license/willpinha/modern-express-template?style=flat-square&link=https%3A%2F%2Fgithub.com%2Fwillpinha%2Fmodern-express-template%2Fblob%2Fmaster%2FLICENSE" />
+  </a>
 </div>
 
 # Modern Express Template

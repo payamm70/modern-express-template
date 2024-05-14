@@ -11,7 +11,7 @@ const controller: RequestHandler = async (req, res) => {
 		req.body,
 		z.object({
 			customPrefix: z.enum(["Hey", "Hi"]).optional(),
-			name: z.string(),
+			name: z.string().min(1),
 		})
 	);
 

@@ -4,7 +4,8 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import routes from "@/routes";
 import dotenv from "@/lib/dotenv";
-import errorHandler from "@/lib/error-handler";
+import databaseErrorHandler from "@/errors/database.handler";
+import globalErrorHandler from "@/errors/global.handler";
 
 const app = express();
 
@@ -25,14 +26,16 @@ app.use(
 		 *
 		 * {@link https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html#custom-headers-and-cors}
 		 */
-		origin: [new RegExp("http://localhost:\\d*"), "https://example.com"],
+		origin: [new RegExp("http://localhost:\\d+"), "https://example.com"],
 		credentials: true,
 	})
 );
 
 app.use("/api", routes);
 
-app.use(errorHandler);
+// Error handlers. The global error handler must be the last middleware in the chain
+app.use(databaseErrorHandler);
+app.use(globalErrorHandler);
 
 app.listen(dotenv.SERVER_PORT, () => {
 	console.log(`🚀 Server is running on port ${dotenv.SERVER_PORT}`);

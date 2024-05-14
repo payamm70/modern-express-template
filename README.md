@@ -14,7 +14,7 @@
 
 # Modern Express Template
 
-> A modern Express 5 template that adds directory structure, database access, response standardization, logging, testing, error handling, and many other features
+> A modern, production-ready Express 5 template with many features included
 
 > [!NOTE]
 > This project is inspired by the great [node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate) repository

@@ -13,7 +13,8 @@ Just run the following command on an empty project and everything will be setup 
 npx modern-express-template
 ```
 
-You can also click on the <kbd>Use this template ▾</kbd> button to create a new repository from this template
+You can also click on the <kbd>[Use this template ▾](https://github.com/new?template_name=modern-express-template&template_owner=willpinha)</kbd>
+button to create a new repository from this template
 
 > [!IMPORTANT]
 > If you use this button, your repository will have text ***generated from template***, which may be undesirable

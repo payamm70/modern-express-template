@@ -10,24 +10,34 @@
 Just run the following command on an empty project and everything will be setup for you
 
 ```
+npx modern-express-template
 ```
+
+You can also click on the <kbd>Use this template ▾</kbd> button to create a new repository from this template
+
+> [!IMPORTANT]
+> If you use this button, your repository will have text ***generated from template***, which may be undesirable
+
+## Philosophy
+
+
 
 ## Features
 
-- [Directory structure]()
-- [TypeScript support]()
-- [Swagger documentation]()
-- [Request validation with Zod]()
-- [Standardization of responses with JSend]()
-- [Type-safe environment variables]()
-- [Database access with Drizzle ORM]()
-- [Global and local error handling]()
-- [API versioning]()
-- [Tests]()
-- [Logging]()
-- [CORS]()
-- [Code format with Prettier and ESLint]()
-- [Docker]()
+- 📂 [Directory structure]()
+- 🖊️ [TypeScript support]()
+- 📖 [Swagger documentation]()
+- 🔎 [Request validation with Zod]()
+- 📮 [Standardization of responses with JSend]()
+- ♻️ [Type-safe environment variables]()
+- 💾 [Database access with Drizzle ORM]()
+- 🧯 [Global and local error handling]()
+- 🏷️ [API versioning]()
+- 🧪 [Tests]()
+- 📬 [Logging]()
+- 🔒 [CORS]()
+- 📐 [Code format with Prettier and ESLint]()
+- 🚀 [Deployment]()
 
 ## FAQ
 

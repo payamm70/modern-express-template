@@ -7,7 +7,7 @@
 <br />
 
 <div align="center">
-  <a href="">
+  <a href="https://github.com/willpinha/modern-express-template/blob/master/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/willpinha/modern-express-template?style=flat-square&link=https%3A%2F%2Fgithub.com%2Fwillpinha%2Fmodern-express-template%2Fblob%2Fmaster%2FLICENSE" />
   </a>
 </div>

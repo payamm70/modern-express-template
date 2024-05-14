@@ -7,8 +7,6 @@ import { validate } from "@/utils/validation";
 import { getHelloMessage } from "@/services/hello.service";
 
 const controller: RequestHandler = async (req, res) => {
-	const { foo } = res.locals;
-
 	const { receiver, customPrefix } = await validate(
 		req.body,
 		z.object({
@@ -16,6 +14,8 @@ const controller: RequestHandler = async (req, res) => {
 			receiver: z.string().min(1),
 		})
 	);
+
+	const { foo } = res.locals;
 
 	const msg = getHelloMessage(foo, receiver, customPrefix);
 

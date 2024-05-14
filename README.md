@@ -14,7 +14,7 @@
 
 # Modern Express Template
 
-> A modern, production-ready Express 5 template with many features included
+> A modern, production-ready Express 5 template with [many features included](https://github.com/willpinha/modern-express-template?tab=readme-ov-file#features)
 
 > [!NOTE]
 > This project is inspired by the great [node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate) repository

@@ -6,6 +6,17 @@ import { JSend } from "@/utils/jsend";
 import { validate } from "@/utils/validation";
 import { getHelloMessage } from "@/services/hello.service";
 
+/**
+ * @swagger
+ * /api/hello:
+ *   post:
+ *     description: Get a hello message
+ *     responses:
+ *       200:
+ *         description: Returns a hello message from the sender to the receiver
+ *       400:
+ *         description: Invalid request body
+ */
 const controller: RequestHandler = async (req, res) => {
 	const { receiver, customPrefix } = await validate(
 		req.body,

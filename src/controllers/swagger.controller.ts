@@ -9,7 +9,7 @@ const specOptions = {
 			version: "1.0.0",
 		},
 	},
-	apis: ["../*.ts"],
+	apis: ["../**/*.ts"],
 };
 
 const uiOptions = {

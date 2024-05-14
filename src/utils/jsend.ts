@@ -7,14 +7,14 @@
  * {@link https://github.com/omniti-labs/jsend}
  */
 export namespace JSend {
-	export function success<T>(data: T): JSendResponse<T> {
+	export function success<T>(data: T): JSendResponse.Success<T> {
 		return {
 			status: "success",
 			data,
 		};
 	}
 
-	export function fail<T>(data: T): JSendResponse<T> {
+	export function fail<T>(data: T): JSendResponse.Fail<T> {
 		return {
 			status: "fail",
 			data,
@@ -25,7 +25,7 @@ export namespace JSend {
 		message: string,
 		code?: number,
 		data?: T
-	): JSendResponse<T> {
+	): JSendResponse.Error<T> {
 		return {
 			status: "error",
 			message,

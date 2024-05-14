@@ -15,6 +15,7 @@ const controller: RequestHandler = async (req, res) => {
 		})
 	);
 
+	// From foo middleware
 	const { foo } = res.locals;
 
 	const msg = getHelloMessage(foo, receiver, customPrefix);

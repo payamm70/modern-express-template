@@ -1,3 +1,7 @@
+<div align="center">
+  <img width="150" alt="Modern Express Template" src="https://github.com/willpinha/modern-express-template/assets/86596621/4f640c17-ef85-4460-b10b-5fa1a8dcfc18" />
+</div>
+
 # Modern Express Template
 
 > A modern Express 5 template that adds directory structure, database access, response standardization, logging, testing, error handling, and many other features

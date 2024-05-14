@@ -9,11 +9,12 @@ import {
 import helloController from "@/controllers/hello.controller";
 
 // Middlewares
+import fooMiddleware from "@/middlewares/foo.middleware";
 
 const router = express.Router();
 
 router.get("/docs/swagger.json", (req, res) => res.json(swaggerSpec));
 router.use("/docs", swaggerServe, swaggerSetup);
-router.post("/hello", helloController);
+router.post("/hello", fooMiddleware, helloController);
 
 export default router;

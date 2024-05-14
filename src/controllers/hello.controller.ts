@@ -7,15 +7,17 @@ import { validate } from "@/utils/validation";
 import { getHelloMessage } from "@/services/hello.service";
 
 const controller: RequestHandler = async (req, res) => {
-	const { name, customPrefix } = await validate(
+	const { foo } = res.locals;
+
+	const { receiver, customPrefix } = await validate(
 		req.body,
 		z.object({
 			customPrefix: z.enum(["Hey", "Hi"]).optional(),
-			name: z.string().min(1),
+			receiver: z.string().min(1),
 		})
 	);
 
-	const msg = getHelloMessage(name, customPrefix);
+	const msg = getHelloMessage(foo, receiver, customPrefix);
 
 	res.status(200).json(JSend.success(msg));
 };

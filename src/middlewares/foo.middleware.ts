@@ -2,6 +2,10 @@
 
 import { RequestHandler } from "express";
 
-const handler: RequestHandler = (req, res, next) => {};
+const handler: RequestHandler = (req, res, next) => {
+	res.locals.foo = "Banana";
+
+	next();
+};
 
 export default handler;

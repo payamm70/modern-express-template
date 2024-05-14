@@ -1,5 +1,9 @@
 // This is only an example file. You can safely delete it
 
-export function getHelloMessage(name: string, prefix: string = "Hello") {
-	return `${prefix}, ${name}!`;
+export function getHelloMessage(
+	senderName: string,
+	receiverName: string,
+	prefix: string = "Hello"
+) {
+	return `${prefix}, ${receiverName}! I am ${senderName}`;
 }

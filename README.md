@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="150" alt="Modern Express Template" src="https://github.com/willpinha/modern-express-template/assets/86596621/4f640c17-ef85-4460-b10b-5fa1a8dcfc18" />
+  <img width="150" alt="Modern Express Template" src="https://github.com/willpinha/modern-express-template/assets/86596621/94518c9d-92e2-4b3d-abe7-a5823a66a9d7" />
 </div>
 
 # Modern Express Template

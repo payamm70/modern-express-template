@@ -39,6 +39,8 @@ button to create a new repository from this template
 
 ## Features
 
+Use this section as documentation to learn the project structure and approaches for building your REST APIs
+
 - 📂 [Directory structure]()
 - 🖊️ [TypeScript support]()
 - 📖 [Swagger documentation]()

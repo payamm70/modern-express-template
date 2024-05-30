@@ -1,16 +1,17 @@
+// You can declare your own global types in here
 declare global {
-	export namespace JSendResponse {
-		export type Success<T> = {
+	namespace JSendResponse {
+		type Success<T> = {
 			status: "success";
 			data: T;
 		};
 
-		export type Fail<T> = {
+		type Fail<T> = {
 			status: "fail";
 			data: T;
 		};
 
-		export type Error<T = {}> = {
+		type Error<T = {}> = {
 			status: "error";
 			message: string;
 			code?: number;

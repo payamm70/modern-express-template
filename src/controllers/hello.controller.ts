@@ -1,18 +1,33 @@
 // This is only an example file. You can safely delete it
 
 import { RequestHandler } from "express";
-import { z } from "zod";
 import { JSend } from "@/utils/jsend";
 import { validate } from "@/utils/validation";
 import { getHelloMessage } from "@/services/hello.service";
+import { helloReceiverSchema } from "@/schemas/hello.schema";
 
-const controller: RequestHandler = async (req, res) => {
-	const { receiver, customPrefix } = await validate(
+/**
+ * @swagger
+ * /api/hello:
+ *   post:
+ *     summary: Gets a hello (hey/hi) message from the sender to the receiver
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/HelloReceiverSchema'
+ *     responses:
+ *       200:
+ *         description: The hello message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/HelloMessageSchema'
+ */
+const post: RequestHandler = async (req, res) => {
+	const { customPrefix, receiver } = await validate(
 		req.body,
-		z.object({
-			customPrefix: z.enum(["Hey", "Hi"]).optional(),
-			receiver: z.string().min(1),
-		})
+		helloReceiverSchema
 	);
 
 	// From foo middleware
@@ -23,4 +38,6 @@ const controller: RequestHandler = async (req, res) => {
 	res.status(200).json(JSend.success(msg));
 };
 
-export default controller;
+export default {
+	post,
+};

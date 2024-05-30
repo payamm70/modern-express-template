@@ -7,6 +7,8 @@ import dotenv from "@/lib/dotenv";
 import databaseErrorHandler from "@/errors/database.handler";
 import globalErrorHandler from "@/errors/global.handler";
 
+import "@/lib/swagger";
+
 const app = express();
 
 app.use("/public", express.static("public"));

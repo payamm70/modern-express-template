@@ -1,15 +1,18 @@
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
+import { generator } from "@/lib/swagger";
 
 const specOptions = {
+	failOnErrors: true,
 	definition: {
 		openapi: "3.0.0",
 		info: {
-			title: "Hello World",
+			title: "Modern Express Template",
 			version: "1.0.0",
 		},
+		...generator.generateComponents(),
 	},
-	apis: ["../routes.ts"],
+	apis: ["../**/*.ts"],
 };
 
 const uiOptions = {
